@@ -6,18 +6,17 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/register', function(req, res, next){
-  let hashedPassword = bcrypt.hashsyn(password,10);
-  return db.one('INSERT INTO users (username, password_hash) VALUES ($1, $2) returning id', [userdname, hasedPassword])
+router.post('/users',function(req, res, next){
+  let username = "benjamin";
+  let password = "password";
+  let userid = 1;
+  return db.any('INSERT INTO user2 VALUES($1, $2, $3)',[username,password,userid]).then(function(data){
+console.log("data",data);
+  }).catch(function(error){
+    console.log(error);
+  });
+  
 })
-.then(() =>{
-  res.send('success')
-})
-.catch(function(error){
-  console.log("error", error);
-  res.status(400).send(error)
-});
-
 
 
   
