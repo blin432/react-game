@@ -18,6 +18,18 @@ console.log("data",data);
   
 })
 
+router.get('/users/login',function(req, res, next){
+  let username = "benjamin";
+  let password = "password";
+  let userid = 1;
+  return db.any('SELECT * FROM user2 VALUES($1, $2)',[username,password,]).then(function(data){
+console.log("data",data);
+  }).catch(function(error){
+    console.log(error);
+  });
+  
+})
+
 
   
 

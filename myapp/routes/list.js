@@ -17,6 +17,24 @@ console.log("data",data);
   
 })
 
+router.get('/getlist', function(req, res, next) {
+  return db.any('SELECT * FROM list2 VALUES($1)',[task]).then(function(data){
+    console.log("data",data);
+      }).catch(function(error){
+        console.log(error);
+      });
+  res.send('respond with a resource');
+});
+
+
+router.get('/editlist', function(req, res, next) {
+  res.send('respond with a resource');
+  return db.any('SELECT * FROM list2 VALUES($1)',[task]).then(function(data){
+    console.log("data",data);
+      }).catch(function(error){
+        console.log(error);
+      });
+});
 
   
 
