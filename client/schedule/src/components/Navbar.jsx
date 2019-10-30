@@ -3,7 +3,7 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
 
-class NavBar extends Component {
+class Navbar extends Component {
 
   render() {
 
@@ -36,4 +36,4 @@ class NavBar extends Component {
         }
       }
 
-export default NavBar;
+      export default withRouter(Navbar);

@@ -1,30 +1,22 @@
 import React, { Component } from 'react';
-import { Button,Accordion,Card, InputGroup,FormControl} from 'react-bootstrap';
-import {createStore } from 'redux';
-import {mainReducer} from '../reducer.js'
+import {Container} from 'react-bootstrap';
+// import {createStore } from 'redux';
+// import {mainReducer} from '../reducer.js'
 
-let store = createStore(mainReducer);
+// let store = createStore(mainReducer);
 
-class Item extends Component {
+class Home extends Component {
   constructor(props){
     super(props)
     this.state={
-      ...store.getState(),
+
      
     }
   }
 
-  componentDidMount() {
-    fetch()
-    .then(res => res.json())
-    .then((data) => {
-        this.setState({ data: data })
-    })
-    .catch(console.log)
-  }
-
 render(){
-  <div>
+  
+  return (
     <div className ="project">
         <div className= 'p-3 bg-light'>
             <Link to="/" className="latest p-3 text-dark">Latest</Link>
@@ -39,10 +31,10 @@ render(){
           </Row>
         </Container>
       </div>
-  </div>
+  );
 }
 }
 
 
 
-export default Item;
+export default withRouter(Home);

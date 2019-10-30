@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
-import { Button,Accordion,Card, InputGroup,FormControl} from 'react-bootstrap';
-import {createStore } from 'redux';
-import Schedule from '../components/Schedule.jsx';
-import {mainReducer} from '../reducer.js'
+import { Button, Form,Container} from 'react-bootstrap';
+// import {createStore } from 'redux';
+// import {mainReducer} from '../reducer.js'
 
-let store = createStore(mainReducer);
+// let store = createStore(mainReducer);
 
 class Dashboard extends Component {
   constructor(props){
     super(props)
     this.state={
-      ...store.getState(),
-     
+      player:[],
+      
     }
   }
 
+  // componentDidMount() {
+  //   fetch('')
+  //   .then(res => res.json())
+  //   .then((data) => {
+  //       this.setState({ data: data })
+  //   })
+  //   .catch(console.log)
+  // }
+
+
 render(){
-  
+  let {item,i}= this.props
   return (
-    <div className ="project">
-    <Header/>
     <Container className="text-center">
       <Row>
         <Col md={{span: 8, offset: 2}} lg={{span: 8, offset: 2}}>
@@ -37,11 +44,10 @@ render(){
         </Col>
       </Row>
     </Container>
-  </div>
   );
 }
 }
 
 
 
-export default Dashboard;
+export default withRouter(Dashboard);
