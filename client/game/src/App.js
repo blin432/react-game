@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Home from './components/Home.jsx';
-import Username from './components/Username.jsx';
-import Dashboard from './components/Dashboard.jsx';
-import Navbar from './components/Navbar.jsx';
+import Home from './components/Home.jsx.js';
+import Username from './components/Username.jsx.js';
+import Dashboard from './components/Dashboard.jsx.js';
+import Navbar from './components/Navbar.jsx.js';
 
 import { Switch, Route, withRouter} from 'react-router-dom';
 
