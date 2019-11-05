@@ -14,14 +14,7 @@ class Username extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   fetch()
-  //   .then(res => res.json())
-  //   .then((data) => {
-  //       this.setState({ data: data })
-  //   })
-  //   .catch(console.log)
-  // }
+ 
 
 render(){
   <div>

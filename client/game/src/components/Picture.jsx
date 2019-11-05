@@ -26,14 +26,10 @@ class Home extends Component {
     
     return (
       <div className ="project">
-        <div className= 'p-3 bg-light'>
-            <Link to="/" className="latest p-3 text-dark">Latest</Link>
-            <Link to="/search" className="search p-3 text-dark">Search</Link>
-        </div>
         <Container className="text-center mt-3">
           <Row>
             <Col md={{span: 8, offset: 2}} lg={{span: 8, offset: 2}}>
-              
+              <img src=""></img>
             </Col>
           </Row>
         </Container>
